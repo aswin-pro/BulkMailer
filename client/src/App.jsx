@@ -40,7 +40,7 @@ function App() {
     setstatus(true) //this is for button status
     setmsg("")
     setsubject("")
-    axios.post("http://localhost:5000/sendemail", { sub: subject, msg: msg, emailList: EmailList })
+    axios.post("https://bulkmailer-wdyk.onrender.com/sendemail", { sub: subject, msg: msg, emailList: EmailList })
       .then((data) => {
         if (data.data == true) {
           alert("Email Sent Successfully...")
